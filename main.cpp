@@ -2,6 +2,7 @@
 #include <GL/glut.h>
 #include <GL/glut.h>
 
+    //La Ode Zahirul-------------------------------------------------------------------------------
     //Initializes 3D rendering (memberikan inisialisai 3D)
     void initRendering() {
      glEnable(GL_DEPTH_TEST); //metode hidden_surface removal untuk mengatur sudut pandang kapan suatu objek tertutup dengan objek lain
@@ -19,12 +20,14 @@
      gluPerspective(35.0, (double)w / (double)h, 1.0, 200.0);
     }
     float _angle = -50.0f;
-        //Draws the 3D scene
+    //Draws the 3D scene
     void drawScene() {
      glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
      glMatrixMode(GL_MODELVIEW); // keep it like this
      glLoadIdentity();
      glTranslatef(0.0f, 0.0f, -14.0f);
+
+     //La Ode Muhammad Firza--------------------------------------------------------------------
      //Add ambient light
      GLfloat ambientColor[] = {0.2f, 0.2f, 0.2f, 1.0f}; //Color (0.2, 0.2, 0.2)
      glLightModelfv(GL_LIGHT_MODEL_AMBIENT, ambientColor);
@@ -35,33 +38,30 @@
      glLightfv(GL_LIGHT0, GL_POSITION, lightPos0);
      //Add directed light
      GLfloat lightColor1[] = {0.5f, 0.2f, 0.2f, 1.0f}; //Color (0.5, 0.2, 0.2)
-     //Coming from the direction (-1, 0.5, 0.5)
      GLfloat lightPos1[] = {-1.0f, 0.5f, 0.5f, 0.0f};
      glLightfv(GL_LIGHT1, GL_DIFFUSE, lightColor1);
      glLightfv(GL_LIGHT1, GL_POSITION, lightPos1);
      glRotatef(10, 1.0f, 0.0f, 0.0f);
      glRotatef(-0.0, 0.0f, 0.0f, 1.0f);
      glRotatef(_angle,0.0f, 1.0f, 0.0f);
-     //glRotatef(10, 1.0f, 0.0f, 0.0f);
-     //glRotatef(-10, 0.0f, 0.0f, 1.0f);
-     //glRotatef(_angle,0.0f, 1.0f, 0.0f);
-      glColor3f(1.1f, 1.1f, 1.1f);
+     glColor3f(1.1f, 1.1f, 1.1f);
      glBegin(GL_QUADS);
+
+     //Nirwana-------------------------------------------------------------------------------------
      //front depan atas
      glColor3f(5.1f, 5.1f, 1.1f);
-     //glNormal3f(-1.0f, 0.0f, 0.0f);
      glVertex3f(-0.9f, 0.2f, -1.8f);
      glVertex3f(0.9f, 0.2f, -1.8f);
      glVertex3f(0.9f, 3.5f, -1.8f);
      glVertex3f(-0.9f, 3.5f, -1.8f);
      //back belakang atas
-     //glNormal3f(-1.0f, 0.0f, 0.0f);
      glVertex3f(-0.9f, 0.2f, -2.0f);
      glVertex3f(0.9f, 0.2f, -2.0f);
      glVertex3f(0.9f, 3.5f, -2.0f);
      glVertex3f(-0.9f, 3.5f, -2.0f);
+
+     //Tunfatul Uzma-----------------------------------------------------------------------------
      //samping kiri atas
-     // glNormal3f(-1.0f, 0.0f, 0.0f);
      glVertex3f(-0.9f, 0.2f, -2.0f);
      glVertex3f(-0.9f, 3.5f, -2.0f);
      glVertex3f(-0.9f, 3.5f, -1.8f);
@@ -76,6 +76,8 @@
      glVertex3f(-0.9f, 3.5f, -1.8f);
      glVertex3f(0.9f, 3.5f, -1.8f);
      glVertex3f(0.9f, 3.5f, -2.0f);
+
+    //Nur Ilmi Fadilah--------------------------------------------------------------------
     //layar 1
      glColor3f(0,0,0);//WARNA BGIAN LAYAR
      glVertex3f(-0.9f, 0.25f, -1.75f);
@@ -91,6 +93,8 @@
      glEnd();
      glutSwapBuffers();
     }
+
+    //Queen Isabel Felicya T---------------------------------------------------------------------------
     void update(int value) {
      _angle += 1.5f;
      if (_angle > 360) {
